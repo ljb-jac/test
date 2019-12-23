@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>房间展示</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+<link rel="stylesheet" href="css/layout.css">
+<!-- 自定义样式 -->
+<link rel="stylesheet" href="css/lib.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <span class="pull-left glyphicon glyphicon-earphone"> <b>400 880 3586</b> <a>需要帮助？</a><a>旅行提示</a></span>
+      <span class="pull-right"><small>Power by</small> <b>Hotel</b> messages</span>
+    </div>
+  </header>
+  
+  <nav> <!-- 导航分区标签 -->    
+    <div class="container">
+      <h1><b>房间详情</b> <small>——留白北欧清新</small></h1>
+      <div>
+        <!-- 添加右侧导航条 -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-text" ><b>地点</b></a></li>
+          <li><a class="navbar-text" ><b>住宿</b></a></li>
+          <li><a class="navbar-text" ><b>品牌</b></a></li>
+        </ul>        
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- 主体区域 -->
+  <section>
+    <div class="container">
+        <h2 class="page-header"><span class="fa fa-star-o">今日精选</span></h2>
+          
+          <!-- room2-4 -->
+          <!-- 添加一行 分三等份 每一个div里面添加缩略图组件 -->
+          <div class="row">          
+            <div class="col-md-4">
+              <!-- 缩略图组件 -->
+              <div class="thumbnail">
+                <img class="img-responsive img-rounded" src="img/p2.jpg">
+                <div class="caption">
+                  <h3 class="row1"><a>room2</a></h3>
+                </div>
+              </div>
+            </div>            
+            <div class="col-md-4">
+               <!-- 缩略图组件 -->
+              <div class="thumbnail">
+                <img class="img-responsive img-rounded" src="img/p3.jpg">
+                <div class="caption">
+                  <h3 class="row1"><a>room3</a></h3>
+                </div>
+              </div>
+            </div>            
+            <div class="col-md-4">
+               <!-- 缩略图组件 -->
+              <div class="thumbnail">
+                <img class="img-responsive img-rounded" src="img/p4.jpg">
+                <div class="caption">
+                  <h3 class="row1"><a>room4</a></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="page-header"><span class="fa fa-star-o">选择房间</span></h2>
+                   
+          <!-- room5-8 -->
+          <div  class="panel panel-default">
+            <div class="panel-body">
+              <!-- 添加一行 2:1的比例 -->
+              <div class="row">
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded lpic" src="images/room1.png">
+                </div>
+                <div class="col-md-8">
+                  <h3 class="row1"><a >给大家推荐几款不错的房间</a></h3>
+                  <p class="row4">you can see</p>
+                </div>
+                
+              </div>
+            </div>
+            <!-- 面板底部 -->
+            <div class="panel-footer">
+              <!-- 添加一行 3:2:2:3:2 -->
+              <div class="row">
+                <div class="col-md-3">
+                  <span th:text=${a.createdStr} class="fa fa-calendar"> 2018-10-19 11:50</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="fa fa-eye"
+                  > 3</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="fa fa-comment-o"
+                  > 0</span>
+                </div>
+                <div class="col-md-3">
+                  <span th:each="tag : ${a.tags}">
+                    <a  th:text=${tag.title} class="btn btn-info btn-xs">歌曲</a> 
+                  </span>  
+                    <a th:remove="all" class="btn btn-info btn-xs">手机</a> 
+                    <a th:remove="all" class="btn btn-info btn-xs">耳机</a> 
+                </div>
+                <div th:text="'作者:'+${a.userName}" class="col-md-2">作者:admin</div>
+              </div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div  class="panel panel-default">
+            <div class="panel-body">
+              <!-- 添加一行 2:1的比例 -->
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive img-rounded lpic" src="images/room6.png">
+                </div>              
+                <div class="col-md-8">
+                  <h3 class="row1"><a>温馨主题</a></h3>
+                  <p class="row4">you can try</p>
+                </div>
+              </div>
+            </div>
+            <!-- 面板底部 -->
+            <div class="panel-footer">
+              <!-- 添加一行 3:2:2:3:2 -->
+              <div class="row">
+                <div class="col-md-3">
+                  <span class="fa fa-calendar"
+                  > 2018-10-19 11:39</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="fa fa-eye"
+                  > 1</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="fa fa-comment-o"
+                  > 0</span>
+                </div>
+                <div class="col-md-3">
+                  <a class="btn btn-info btn-xs">手机</a> 
+                  <a class="btn btn-info btn-xs">游戏</a> 
+                </div>
+                <div class="col-md-2">作者:admin</div>
+              </div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <!-- 7 -->
+            <div class="panel panel-default">
+            <div class="panel-body">
+              <!-- 添加一行 2:1的比例 -->
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive img-rounded lpic" src="images/room3.png">
+                </div>              
+                <div class="col-md-8">
+                  <h3 class="row1"><a>商务风格</a></h3>
+                  <p class="row4">have a try</p>
+                </div>
+              </div>
+            </div>
+            <!-- 面板底部 -->
+            <div class="panel-footer">
+              <!-- 添加一行 3:2:2:3:2 -->
+              <div class="row">
+                <div class="col-md-3">
+                  <span class="fa fa-calendar"
+                  > 2018-10-17 14:40</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="fa fa-eye"
+                  > 21</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="fa fa-comment-o"
+                  > 0</span>
+                </div>
+                <div class="col-md-3">
+                  <a class="btn btn-info btn-xs">Java</a> 
+                </div>
+                <div class="col-md-2">作者:admin</div>
+              </div>
+            </div>
+          </div>
+          <!-- 7 -->
+          <!-- 8 -->
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <!-- 添加一行 2:1的比例 -->
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive img-rounded lpic" src="img/p7.jpg">
+                </div>                 
+                <div class="col-md-8">             
+                  <h3 class="row1"><a>海景</a></h3>
+                  <p class="row4">beautiful</p>
+                </div>
+              </div>
+            </div>
+            <!-- 面板底部 -->
+            <div class="panel-footer">
+              <!-- 添加一行 3:2:2:3:2 -->
+              <div class="row">
+                <div class="col-md-3">
+                  <span class="fa fa-calendar"
+                  > 2018-11-23 11:19</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="fa fa-eye"
+                  > 0</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="fa fa-comment-o"
+                  > 0</span>
+                </div>
+                <div class="col-md-3">
+                  <a class="btn btn-info btn-xs">游戏</a> 
+                </div>
+                <div class="col-md-2">作者:admin</div>
+              </div>
+            </div>
+          </div>
+          <!-- 8 -->
+          <!-- 5-8over -->
+    </div>
+  </section>
+
+
+
+  <footer class="well">
+    <div class="container">
+      <b>Copyright © 2019 JK.COM <a href="http://www.tmooc.cn">JK酒店集团</a>版权所有</b>
+      <span class="pull-right"><b>Version</b> 0.1.0</span>
+    </div>
+  </footer>
+</body>
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript"
+  src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+</html>
